@@ -41,7 +41,7 @@ commandInput.addEventListener('keydown', function(event) {
 function executeCommand(command) {
   if (command === 'help') {
     terminalOutput.innerHTML += `
-      <p>Available Commands:</p>
+      <p>available commands:</p>
       <p>-about</p>
       <p>-projects</p>
       <p>-contact</p>
@@ -50,23 +50,26 @@ function executeCommand(command) {
     `;
   } else if (command === 'about') {
     terminalOutput.innerHTML += `
-      <p>About Me:</p>
-      <p>I am a web developer passionate about creating awesome websites and applications.</p>
+      <p>about me:</p>
+      <img src="assets/me.jpeg" alt="debaudh(me)"> <!-- Add your image path here -->
+      <p>sophomore at JU.</p>
+      <p>passionate about logical thinking.</p>
     `;
   } else if (command === 'projects') {
     terminalOutput.innerHTML += `
-      <p>Projects:</p>
+      <p>projects:</p>
       <ul>
-        <li>Project 1</li>
-        <li>Project 2</li>
-        <li>Project 3</li>
+        <li>project 1</li>
+        <li>project 2</li>
+        <li>project 3</li>
       </ul>
     `;
   } else if (command === 'contact') {
     terminalOutput.innerHTML += `
-      <p>Contact Me:</p>
-      <p>Email: example@example.com</p>
-      <p>Phone: +1234567890</p>
+      <p>contact Me:</p>
+      <p><a href="mailto:dghosh31428@gmail.com"> ~mail me </a></p>
+      <p><a href="tel:+919903147702"> ~phone </a></p>
+      <p><a href="https://in.linkedin.com/in/debaudh-ghosh-38b0472b1" target="_blank"> ~linkedin </a></p>
     `;
     
   } else if (command === 'clear') {
@@ -112,5 +115,3 @@ function typeMessage(message, speed) {
   document.addEventListener('DOMContentLoaded', function() {
     typeInitialMessages(initialMessages, 50); // Adjust speed as needed (50 milliseconds in this case)
   });
-
-  
