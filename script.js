@@ -95,8 +95,8 @@ function typeMessage(message, speed) {
   
   // Initial messages to be typed out
   const initialMessages = [
-    "Welcome to My Portfolio Terminal",
-    "Type 'help' to see available commands"
+    "welcome to debaudh's terminal",
+    "type 'help' to see available commands"
   ];
   
   // Function to type out the initial messages
