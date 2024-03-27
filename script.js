@@ -66,8 +66,8 @@ function executeCommand(command) {
     `;
   } else if (command === 'contact') {
     terminalOutput.innerHTML += `
-      <p>contact Me:</p>
-      <p><a href="mailto:dghosh31428@gmail.com"> ~mail me </a></p>
+      <p>contact me via:</p>
+      <p><a href="mailto:dghosh31428@gmail.com"> ~mail </a></p>
       <p><a href="tel:+919903147702"> ~phone </a></p>
       <p><a href="https://in.linkedin.com/in/debaudh-ghosh-38b0472b1" target="_blank"> ~linkedin </a></p>
     `;
