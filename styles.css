@@ -1,0 +1,91 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: monospace;
+  font-size: 15px;
+  background-color: black;
+  color: rgb(0, 175, 0);
+}
+
+#terminal {
+  width: 700px;
+  height: 450px;
+  margin: 100px auto;
+  background-color: black;
+  border: 2px solid white;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.header {
+  background-color: white; /* Light gray background */
+  /*border-bottom: 1px solid #c8c8c8; /* Light gray border */
+  height: 21px;
+}
+
+.header span {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  margin: 4px 1px; /* Adjust margin to get closer */
+  border-radius: 50%;
+}
+
+.close-btn {
+  background-color: #ff5f56;
+  margin-right: 5px; /* Adjust margin to get closer */
+}
+
+.minimize-btn {
+  background-color: #ffbd2e;
+  margin-right: 2px; /* Adjust margin to get closer */
+}
+
+.expand-btn {
+  background-color: #27c93f;
+  margin-right: 2px; /* Adjust margin to get closer */
+}
+
+.content {
+  padding: 7px;
+  height: calc(100% - 30px);
+  overflow-y: auto;
+}
+
+.terminal-output {
+  margin-bottom: 10px;
+}
+
+.input-line {
+  display: flex;
+  align-items: center;
+}
+
+.prompt {
+  margin-right: 5px;
+}
+
+input[type="text"] {
+  background-color: transparent;
+  border: none;
+  color: rgb(0, 175, 0);
+  font-family: monospace;
+  font-size: inherit;
+  width: calc(100% - 40px);
+  outline: none;
+}
+
+input[type="text"]:focus {
+  outline: none;
+}
+
+.terminal-output {
+  margin-bottom: 10px;
+  font-family: monospace;
+  line-height: normal; 
+}
+
+.terminal-output p {
+  margin: 0; 
+}
+
