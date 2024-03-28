@@ -47,6 +47,7 @@ function executeCommand(command) {
       <p>-contact</p>
       <p>-clear</p>
       <p>-help</p>
+      <p>-exit</p>
     `;
   } else if (command === 'about') {
     terminalOutput.innerHTML += `
@@ -71,15 +72,15 @@ function executeCommand(command) {
       <p><a href="tel:+919903147702"> ~phone </a></p>
       <p><a href="https://in.linkedin.com/in/debaudh-ghosh-38b0472b1" target="_blank"> ~linkedin </a></p>
     `;
-    
   } else if (command === 'clear') {
     terminalOutput.innerHTML = `
     `;
-  }  else {
+  } else if (command === 'exit') {
+    window.close(); // close the webpage
+  } else {
     terminalOutput.innerHTML += `<p>${command}: command not found</p>`;
   }
 }
-
 // Function to simulate typing effect
 function typeMessage(message, speed) {
     return new Promise(resolve => {
