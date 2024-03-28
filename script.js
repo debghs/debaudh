@@ -47,7 +47,6 @@ function executeCommand(command) {
       <p>-contact</p>
       <p>-clear</p>
       <p>-help</p>
-      <p>-exit</p>
     `;
   } else if (command === 'about') {
     terminalOutput.innerHTML += `
@@ -75,9 +74,7 @@ function executeCommand(command) {
   } else if (command === 'clear') {
     terminalOutput.innerHTML = `
     `;
-  } else if (command === 'exit') {
-    window.close(); // close the webpage
-  } else {
+  }  else {
     terminalOutput.innerHTML += `<p>${command}: command not found</p>`;
   }
 }
