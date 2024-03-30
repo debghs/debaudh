@@ -2,32 +2,35 @@ body {
   margin: 0;
   padding: 0;
   font-family: monospace;
-  font-size: 15px;
+  font-size: 16px;
   background-color: black;
   color: rgb(0, 175, 0);
 }
 
 #terminal {
-  width: 700px;
-  height: 450px;
-  margin: 100px auto;
+  width: 800px;
+  height: 500px;
+  margin: 82px auto;
   background-color: black;
   border: 2px solid white;
   border-radius: 10px;
   overflow: hidden;
+  outline: 1px solid black;
+  box-shadow: 0 0 10px white; /* shadow */
 }
 
 .header {
   background-color: white; /* Light gray background */
-  /*border-bottom: 1px solid #c8c8c8; /* Light gray border */
+  outline: 1px solid black;
   height: 21px;
 }
 
 .header span {
   display: inline-block;
-  width: 12px;
-  height: 12px;
-  margin: 4px 1px; /* Adjust margin to get closer */
+  width: 13px;
+  height: 13px;
+  margin: 4.5px 0.5px ; /* Adjust margin to get closer */
+  margin-left: 2px;
   border-radius: 50%;
 }
 
@@ -101,5 +104,3 @@ img {
   margin-bottom: 10px;
   margin-left: 30px;
 }
-
-
