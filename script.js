@@ -53,9 +53,9 @@ function executeCommand(command) {
 \      <div class="about-section">
         <img src="assets/me.jpeg" alt="debaudh(me)" class="about-image">
         <div class="about-text">
-          <p>About Me:</p>
-          <p>Sophomore at JU.</p>
-          <p>Passionate about logical thinking.</p>
+          <p>about me:</p>
+          <p>sophomore at JU.</p>
+          <p>passionate about everything logical.</p>
         </div>
       </div>
     `;
