@@ -81,6 +81,8 @@ function executeCommand(command) {
   }  else {
     terminalOutput.innerHTML += `<p>${command}: command not found</p>`;
   }
+  // Ensure command prompt is visible
+  commandInput.scrollIntoView();
 }
 
 // Function to simulate typing effect
