@@ -50,10 +50,14 @@ function executeCommand(command) {
     `;
   } else if (command === 'about') {
     terminalOutput.innerHTML += `
-      <p>about me:</p>
-      <img src="assets/me.jpeg" alt="debaudh(me)"> <!-- Add your image path here -->
-      <p>sophomore at JU.</p>
-      <p>passionate about logical thinking.</p>
+\      <div class="about-section">
+        <img src="assets/me.jpeg" alt="debaudh(me)" class="about-image">
+        <div class="about-text">
+          <p>About Me:</p>
+          <p>Sophomore at JU.</p>
+          <p>Passionate about logical thinking.</p>
+        </div>
+      </div>
     `;
   } else if (command === 'projects') {
     terminalOutput.innerHTML += `
@@ -78,6 +82,7 @@ function executeCommand(command) {
     terminalOutput.innerHTML += `<p>${command}: command not found</p>`;
   }
 }
+
 // Function to simulate typing effect
 function typeMessage(message, speed) {
     return new Promise(resolve => {
