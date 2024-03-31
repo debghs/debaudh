@@ -81,7 +81,7 @@ function executeCommand(command) {
   }  else {
     terminalOutput.innerHTML += `<p>${command}: command not found</p>`;
   }
-  // Ensure command prompt is visible
+  // Ensures terminal always scrolls down and the prompt is visible
   commandInput.scrollIntoView();
 }
 
