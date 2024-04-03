@@ -41,16 +41,16 @@ commandInput.addEventListener('keydown', function(event) {
 function executeCommand(command) {
   if (command === 'help') {
     terminalOutput.innerHTML += `
-      <p>available commands:</p>
-      <p>-about</p>
-      <p>-projects</p>
-      <p>-contact</p>
-      <p>-clear</p>
-      <p>-help</p>
+      <p></p>
+      <p>about</p>
+      <p>projects</p>
+      <p>contact</p>
+      <p>clear</p>
+      <p>help</p>
     `;
   } else if (command === 'about') {
     terminalOutput.innerHTML += `
-\      <div class="about-section">
+      <div class="about-section">
         <img src="assets/me.jpeg" alt="debaudh(me)" class="about-image">
         <div class="about-text">
           <p>about me:</p>
@@ -79,9 +79,9 @@ function executeCommand(command) {
     terminalOutput.innerHTML = `
     `;
   }  else {
-    terminalOutput.innerHTML += `<p>${command}: command not found</p>`;
+    terminalOutput.innerHTML += `<p>command not found</p>`;
   }
-  // Ensures terminal always scrolls down and the prompt is visible
+  // Ensure command prompt is visible
   commandInput.scrollIntoView();
 }
 
