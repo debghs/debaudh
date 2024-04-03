@@ -14,39 +14,57 @@ body {
   background-color: black;
   border: 2px solid white;
   border-radius: 10px;
-  overflow: hidden;
+  overflow: clip;
   outline: 1px solid black;
   box-shadow: 0 0 10px white; /* shadow */
 }
 
 .header {
+  height: 21px;
   background-color: white; /* Light gray background */
   outline: 1px solid black;
-  height: 21px;
 }
 
-.header span {
-  display: inline-block;
-  width: 13px;
-  height: 13px;
-  margin: 4.5px 0.5px ; /* Adjust margin to get closer */
-  margin-left: 2px;
-  border-radius: 50%;
+.btns {
+  display: grid; 
+  grid-template-columns: repeat(3, 1fr); 
+  gap: 0px;
+  height: 21px;
+  width: 63px;
+  margin-left: 3px;
 }
 
 .close-btn {
   background-color: #ff5f56;
-  margin-right: 5px; /* Adjust margin to get closer */
+  display: inline-flex;
+  width: 13px;
+  height: 13px;
+  margin-top: 4.5px;
+  margin-left: 1px;
+  margin-right: 1px;  
+  border-radius: 50%;
 }
 
 .minimize-btn {
   background-color: #ffbd2e;
-  margin-right: 2px; /* Adjust margin to get closer */
+  display: inline-flex;
+  width: 13px;
+  height: 13px;
+  margin-top: 4.5px;
+  margin-left: 1px;
+  margin-right: 1px;
+  border-radius: 50%;
 }
 
 .expand-btn {
   background-color: #27c93f;
-  margin-right: 2px; /* Adjust margin to get closer */
+  display: inline-flex;
+  width: 13px;
+  height: 13px;
+  margin-top: 4.5px;
+  margin-left: 1px;
+  margin-right: 1px;  
+  border-radius: 50%;
 }
 
 .content {
@@ -76,6 +94,7 @@ input[type="text"] {
   font-size: inherit;
   width: calc(100% - 40px);
   outline: none;
+  margin-right: 5px;
 }
 
 input[type="text"]:focus {
@@ -114,3 +133,4 @@ img {
   margin-left: 30px;
   flex: 1;
 }
+
