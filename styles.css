@@ -104,7 +104,7 @@ input[type="text"]:focus {
 .terminal-output {
   margin-bottom: 10px;
   font-family: monospace;
-  line-height: normal; 
+  line-height: 14px; 
 }
 
 .terminal-output p {
