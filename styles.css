@@ -8,7 +8,8 @@ body {
 }
 
 #terminal {
-  width: 800px;
+  width: 90%; /* Adjusted width for responsiveness */
+  max-width: 800px; /* Maximum width for larger screens */
   height: 500px;
   margin: 82px auto;
   background-color: black;
@@ -134,3 +135,10 @@ img {
   flex: 1;
 }
 
+/* Media Queries */
+@media screen and (max-width: 480px) {
+  /* Adjust terminal width for smaller screens */
+  #terminal {
+    width: 95%;
+  }
+}
