@@ -1,3 +1,6 @@
+// script.js
+import commands from './commands.js';
+
 const terminalOutput = document.querySelector('.terminal-output');
 const commandInput = document.getElementById('command-input');
 const terminalContent = document.querySelector('.content');
@@ -11,6 +14,7 @@ terminalContent.addEventListener('click', () => {
 
 commandInput.addEventListener('keydown', function(event) {
   if (event.key === 'Enter') {
+    event.preventDefault(); // Prevent the default form submission behavior
     const command = commandInput.value.trim();
     commandHistory.push(command); // Add command to history
     historyIndex = commandHistory.length; // Reset history index
@@ -21,12 +25,14 @@ commandInput.addEventListener('keydown', function(event) {
     terminalOutput.scrollTop = terminalOutput.scrollHeight;
   } else if (event.key === 'ArrowUp') {
     // Navigate command history backwards
+    event.preventDefault(); // Prevent the cursor from moving in the input field
     if (historyIndex > 0) {
       historyIndex--;
       commandInput.value = commandHistory[historyIndex];
     }
   } else if (event.key === 'ArrowDown') {
     // Navigate command history forwards
+    event.preventDefault(); // Prevent the cursor from moving in the input field
     if (historyIndex < commandHistory.length - 1) {
       historyIndex++;
       commandInput.value = commandHistory[historyIndex];
@@ -39,51 +45,20 @@ commandInput.addEventListener('keydown', function(event) {
 });
 
 function executeCommand(command) {
-  if (command === 'help') {
-    terminalOutput.innerHTML += `
-      <p></p>
-      <p>about</p>
-      <p>projects</p>
-      <p>contact</p>
-      <p>clear</p>
-      <p>help</p>
-    `;
-  } else if (command === 'about') {
-    terminalOutput.innerHTML += `
-      <div class="about-section">
-        <img src="assets/me.jpeg" alt="debaudh(me)" class="about-image">
-        <div class="about-text">
-          <p>about me:</p>
-          <p>sophomore at JU.</p>
-          <p>passionate about everything logical.</p>
-        </div>
-      </div>
-    `;
-  } else if (command === 'projects') {
-    terminalOutput.innerHTML += `
-      <p>projects:</p>
-      <ul>
-        <li>project 1</li>
-        <li>project 2</li>
-        <li>project 3</li>
-      </ul>
-    `;
-  } else if (command === 'contact') {
-    terminalOutput.innerHTML += `
-      <p>contact me via:</p>
-      <p><a href="mailto:dghosh31428@gmail.com"> ~mail </a></p>
-      <p><a href="tel:+919903147702"> ~phone </a></p>
-      <p><a href="https://in.linkedin.com/in/debaudh-ghosh-38b0472b1" target="_blank"> ~linkedin </a></p>
-    `;
-  } else if (command === 'clear') {
-    terminalOutput.innerHTML = `
-    `;
-  }  else {
+  if (commands.hasOwnProperty(command)) {
+    if (command === 'clear') {
+      terminalOutput.innerHTML = ''; // Clear terminal output
+    } else {
+      terminalOutput.innerHTML += commands[command];
+    }
+  } else {
     terminalOutput.innerHTML += `<p>command not found</p>`;
   }
   // Ensure command prompt is visible
   commandInput.scrollIntoView();
 }
+
+
 
 // Function to simulate typing effect
 function typeMessage(message, speed) {
